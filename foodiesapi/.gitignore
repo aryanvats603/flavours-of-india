@@ -1,0 +1,76 @@
+HELP.md
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### STS ###
+.apt_generated
+.classpath
+.factorypath
+.project
+.settings
+.springBeans
+.sts4-cache
+
+### IntelliJ IDEA ###
+.idea
+*.iws
+*.iml
+*.ipr
+
+### NetBeans ###
+/nbproject/private/
+/nbbuild/
+/dist/
+/nbdist/
+/.nb-gradle/
+build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+.vscode/
+
+**/application.properties
+
+# But allow the example file
+!**/application.properties.example
+
+# ==========================================
+# Configuration Files with Secrets
+# ==========================================
+
+# Spring Boot properties (real files)
+**/application.properties
+**/application-dev.properties
+**/application-prod.properties
+**/application-local.properties
+
+# Allow example/template files
+!**/application.properties.example
+!**/application-template.properties
+
+# Environment files (React)
+.env
+.env.local
+.env.development
+.env.production
+.env.test
+*.env
+
+# Allow example env files
+!.env.example
+!.env.template
+
+# AWS credentials
+.aws/
+**/aws-credentials.json
+**/credentials
+
+# Other secrets
+secrets/
+*.key
+*.pem
+*.p12
+*.jks

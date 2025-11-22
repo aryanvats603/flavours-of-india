@@ -1,0 +1,313 @@
+.register-container {
+    background-image: url("../../assets/login.jpeg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .register-container::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, 
+      rgba(15, 12, 41, 0.92) 0%, 
+      rgba(48, 43, 99, 0.88) 50%, 
+      rgba(36, 36, 62, 0.92) 100%);
+    z-index: 1;
+  }
+  
+  .register-container::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle at center, rgba(102, 126, 234, 0.1) 0%, transparent 70%);
+    animation: registerPulse 20s ease-in-out infinite;
+    z-index: 2;
+  }
+  
+  @keyframes registerPulse {
+    0%, 100% { 
+      transform: translate(0, 0) rotate(0deg); 
+    }
+    50% { 
+      transform: translate(5%, 5%) rotate(180deg); 
+    }
+  }
+  
+  .register-container .row {
+    position: relative;
+    z-index: 3;
+    width: 100%;
+  }
+  
+  .register-container .card {
+    background: linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(45, 45, 68, 0.95) 100%);
+    border: 1px solid rgba(102, 126, 234, 0.3) !important;
+    border-radius: 24px !important;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5),
+                0 0 40px rgba(102, 126, 234, 0.2),
+                inset 0 0 40px rgba(102, 126, 234, 0.05) !important;
+    backdrop-filter: blur(20px);
+    transition: all 0.4s ease;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .register-container .card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, #667eea 0%, #764ba2 50%, #f093fb 100%);
+    animation: shimmer 3s ease-in-out infinite;
+  }
+  
+  @keyframes shimmer {
+    0%, 100% { opacity: 0.5; }
+    50% { opacity: 1; }
+  }
+  
+  .register-container .card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 25px 70px rgba(0, 0, 0, 0.6),
+                0 0 50px rgba(102, 126, 234, 0.3),
+                inset 0 0 40px rgba(102, 126, 234, 0.08);
+  }
+  
+  .register-container .card-body {
+    position: relative;
+    z-index: 1;
+  }
+  
+  .register-container .card-title {
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+    background: linear-gradient(135deg, #ffffff 0%, #a78bfa 50%, #f093fb 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: 1px;
+    margin-bottom: 2rem !important;
+    text-transform: uppercase;
+  }
+  
+  .register-container .form-floating {
+    position: relative;
+    margin-bottom: 1.5rem !important;
+  }
+
+  .register-container .form-floating > label {
+    color: rgba(255, 255, 255, 0.95) !important;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+    display: block;
+    position: static !important;
+    transform: none !important;
+    padding: 0 !important;
+    background: none !important;
+  }
+  
+ .register-container .form-control {
+  background: rgba(0, 0, 0, 0.4) !important;
+  border: 2px solid rgba(102, 126, 234, 0.5) !important;
+  border-radius: 12px !important;
+  color: #ffffff !important;
+  padding: 0.875rem 1rem !important;
+  height: 50px !important;
+  font-size: 1.1rem;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  box-shadow: inset 0 2px 10px rgba(0, 0, 0, 0.3);
+  width: 100%;
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #00ff88 !important;
+}
+
+.register-container .form-control:-webkit-autofill,
+.register-container .form-control:-webkit-autofill:hover,
+.register-container .form-control:-webkit-autofill:focus,
+.register-container .form-control:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 50px rgba(0, 0, 0, 0.6) inset !important;
+  -webkit-text-fill-color: #ffffff !important;
+  caret-color: #00ff88 !important;
+  border: 2px solid rgba(102, 126, 234, 0.5) !important;
+  font-weight: 600;
+}
+
+.register-container .form-control:focus {
+  background: rgba(0, 0, 0, 0.5) !important;
+  border-color: #667eea !important;
+  box-shadow: 0 0 0 0.2rem rgba(102, 126, 234, 0.25),
+              inset 0 2px 10px rgba(0, 0, 0, 0.3),
+              0 0 20px rgba(102, 126, 234, 0.3) !important;
+  color: #ffffff !important;
+  outline: none;
+}
+  
+  .register-container .form-control::placeholder {
+    color: rgba(255, 255, 255, 0.4) !important;
+    font-weight: 400;
+  }
+  
+  .register-container .btn-login {
+    padding: 0.875rem 2rem;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+    border-radius: 12px;
+    border: 2px solid transparent;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .register-container .btn-login::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    width: 100%;
+    height: 100%;
+    border-radius: 12px;
+    transition: transform 0.4s ease;
+    z-index: -1;
+  }
+  
+  .register-container .btn-outline-primary {
+    color: #667eea !important;
+    border-color: #667eea !important;
+    background: transparent !important;
+  }
+  
+  .register-container .btn-outline-primary::before {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  }
+  
+  .register-container .btn-outline-primary:hover {
+    color: #ffffff !important;
+    border-color: #667eea !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(102, 126, 234, 0.5);
+  }
+  
+  .register-container .btn-outline-primary:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .register-container .btn-outline-danger {
+    color: #f093fb !important;
+    border-color: #f093fb !important;
+    background: transparent !important;
+  }
+  
+  .register-container .btn-outline-danger::before {
+    background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+  }
+  
+  .register-container .btn-outline-danger:hover {
+    color: #ffffff !important;
+    border-color: #f093fb !important;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(240, 147, 251, 0.5);
+  }
+  
+  .register-container .btn-outline-danger:hover::before {
+    transform: translate(-50%, -50%) scale(1);
+  }
+  
+  .register-container .btn-login:active {
+    transform: translateY(-1px);
+  }
+  
+  .register-container .mt-4 {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.95rem;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+  }
+  
+  .register-container .mt-4 a {
+    color: #a78bfa;
+    text-decoration: none;
+    font-weight: 700;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  
+  .register-container .mt-4 a::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #667eea 0%, #f093fb 100%);
+    transition: width 0.3s ease;
+  }
+  
+  .register-container .mt-4 a:hover {
+    color: #f093fb;
+  }
+  
+  .register-container .mt-4 a:hover::after {
+    width: 100%;
+  }
+  
+  @media (max-width: 768px) {
+    .register-container {
+      padding: 1rem;
+    }
+  
+    .register-container .card {
+      border-radius: 20px !important;
+      margin: 1rem 0 !important;
+    }
+  
+    .register-container .card-title {
+      font-size: 1.5rem !important;
+    }
+  
+    .register-container .form-control {
+      font-size: 0.95rem;
+      height: 46px !important;
+    }
+  
+    .register-container .btn-login {
+      padding: 0.75rem 1.5rem;
+      font-size: 0.95rem;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .register-container .card-body {
+      padding: 2rem 1.5rem !important;
+    }
+  
+    .register-container .card-title {
+      font-size: 1.3rem !important;
+      margin-bottom: 1.5rem !important;
+    }
+  
+    .register-container .form-floating {
+      margin-bottom: 1.25rem !important;
+    }
+  }
