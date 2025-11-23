@@ -21,7 +21,7 @@
 
 **Frontend:** React, Bootstrap 5, Custom CSS  
 **Backend:** Spring Boot, Spring Security,JWT, JPA/Hibernate
-**Database:** MySQL  
+**Database:** MongoDB
 **Storage:** AWS S3  
 **Payment:** Razorpay
 
@@ -30,7 +30,7 @@
 ### Prerequisites
 - Node.js 16+
 - Java 17+
-- MySQL 8.0+
+- MongoDB
 - Maven 3.8+
 
 ### Backend Setup
@@ -73,7 +73,7 @@ npm run dev
 
 **Backend** (`application.properties`):
 ```properties
-spring.datasource.url=jdbc:mysql://localhost:3306/food_delivery
+spring.data.mongodb.uri=mongodb://localhost:27017/food_delivery
 spring.datasource.username=YOUR_USERNAME
 spring.datasource.password=YOUR_PASSWORD
 aws.access.key=YOUR_AWS_KEY
