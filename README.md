@@ -30,7 +30,7 @@
 ### Prerequisites
 - Node.js 16+
 - Java 17+
-- MongoDB
+- MongoDB 6.0+
 - Maven 3.8+
 
 ### Backend Setup
